@@ -3,20 +3,29 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
 
 /* Général */
 * {
   box-sizing: border-box;
-  margin-top: 0rem;
-  margin-bottom: 1.5rem;
+  margin: 0rem;
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
 }
 html {
   scroll-behavior: smooth;
 }
-h2 {
-  font-weight: bolder;
+
+.titre {
+  text-align: center;
+  text-decoration: dashed;
+  padding: 8rem 0rem 8rem 0rem;
+  font-size: 3rem;  
+}
+h2.competence {
+  font-size: 3rem;
+   padding: 1rem;
+   text-align: center;
 }
 /* navigation */
 .navigation {
@@ -29,26 +38,12 @@ h2 {
 
   font-weight: bold;
   font-size: 1.2rem;
-}
-.navigation .experience
- {
-  color: #fffdfd;
-}
-.navigation .formation
- {
-  color: #fffdfd;
-}
-.navigation .competence
-{
-  color: #fffdfd;
-}
-.navigation .contact
- {
   color: #fffdfd;
 }
 
 .navigation a:hover {
-  border-bottom: 3px solid;
+  color: #fffdfd;
+  border-bottom: 3px solid #251f44;
   text-decoration: none;
 }
 .navigation ul {
@@ -63,9 +58,20 @@ h2 {
   font-size: 1.2rem;
 }
 
-/* Trait séparation nav bar et Jumbo */
-hr {
-  opacity: 0.5;
+/*  Citation  */
+.citation p {
+  margin: auto;
+  width: 60%;
+  font-size: 2rem;
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+}
+span {
+  font-size: 2.5rem;
+}
+p.author {
+  font-size: 1rem;
+  float: rigth;
 }
 /* jumbomain  */
 h1 {
@@ -126,15 +132,17 @@ picture {
 /* ##### Sections ######*/
 
 /* Containers */
-h2 {
-  text-align: center;
-  padding: 2rem 0rem 2rem 0rem;
-  font-size: 2rem;
-  opacity: 1;
+.box {
+  margin: auto;
+  width: 75%;
 }
 h3 {
   text-align: center;
   text-transform: capitalize;
+}
+.petitSpan {
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 /* FONT AWSOME */
 .comp__img {
@@ -171,7 +179,7 @@ a.twitter:hover {
   background-position: -100px 200px;
 }
 /* ######## linkedin btn ########
-  ################################*/
+################################*/
 a.linkedin {
   background-position: -400px 100px;
 }
@@ -183,5 +191,11 @@ a.linkedin:hover {
   display: grid;
   place-items: center;
   padding: 7px, 7px;
+}
+
+.img__parcours {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
 }
 
