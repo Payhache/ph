@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS STYLE -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Font awsome -->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- BOOSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>Pierre-Henri</title>
 </head>
 <header>
-    <nav>
-        <div class="navbar">
-            <ul>
+    <nav class="fixed-top nav w-100">
+        <div class="navigation w-100">
+            <ul class="">
                 <li><a href="#exp" class="experience">#Experience</a></li>
                 <li><a href="#form" class="formation">#Formation</a></li>
-                <li><a href="#" class="competence">#Compétences</a></li>
-                <li><a href="#" class="contact">#Me Contacter</a></li>
+                <li><a href="#comp" class="competence">#Compétences</a></li>
+                <li><a href="#contact" class="contact">#Me Contacter</a></li>
             </ul>
         </div>
          <hr>
@@ -21,62 +26,138 @@
 </header>
 
     <body>
-        <div class="jumbotron">
+        <div class="jumbomain">
             <section class="hero">
                 <picture>
                     <img src="img/Capture1.JPG" alt="" class="hero__img">
                 </picture>
         
                 <h1 class="hero__title">
-                    Salut,  je suis Pierre-Henri ! <br> Je cherche un stage de développeur non rémunéré.
+                    Salut,  je suis Pierre-Henri ! <br> Je recherche un stage de développeur non rémunéré.
                 </h1>
                 <div class="hero__paragraphe">
                     <p> Je suis actuellement une formation de développeur web/web mobile au sein de l’organisme Human Booster dans le cadre d’une reconversion professionnelle.</p>
-                    <p> Ce parcours de 8 mois, validé par un diplôme d’Etat de niveau Bac + 2, intègre un stage non rémunéré de 10 semaines du <strong>23 septembre au 2 décembre 2020</strong>. 
+                    <p> Ce parcours de 8 mois, validé par un diplôme d’Etat de niveau <strong>Bac + 2</strong>, intègre un stage <strong>non rémunéré</strong> de 10 semaines du <strong>23 septembre au 2 décembre 2020</strong>. 
                     </p>
                 </div>
             </section>
         </div>
-        <div id="exp" class="container__dark">
-            <h2 class="exp"> #Expérience </h2>
-            <div class="cards">
-                <section class="card">
-                <h3>controleur SNCF</h3>
-                <div class="img">
-                    <img src="img/controleurMini.jpg" alt="controleur au travail">
+        <!-- ###################################################################### -->
+        <!-- ########################### COMPETENCES ############################### -->
+        <!-- ###################################################################### -->
+        <div id ="comp" class="container__dark">
+            <h2 class="competence">#Compétences Front</h2>
+            <!-- ########################## FRONT CONTAINER ################################### -->
+            <div class="container p-5  border-top rounded">
+                <div class="row">
+                    <div class="col align-self-start div_icons">
+                        <!--######### HTML ######### --> 
+                        <div class="container__comp ">
+                            <div class="comp__img float-left">
+                                <p class="text-center"> HTML 5</p>
+                                <i class="fab fa-html5"></i>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col align-self-center div_icons">
+                        <!--######### CSS ######### -->
+                        <div class="container__comp">
+                            <div class="comp__img float-left">
+                                <p class="text-center"> CSS 3 </p>   
+                                <i class="fab fa-css3-alt"></i>
+                            </div> 
+                        </div>    
+                    </div>
+                    <div class="col align-self-end div_icons">
+                        <!-- ######### Javascript ######### -->
+                        <div class="container__comp">
+                            <div class="comp__img float-left">
+                                <p class="text-center"> Javascript</p>   
+                                <i class="fab fa-js"></i>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
-                <p> Contrôleur pendant plus de dix ans, j'ai appris l'humilité, le self contrôle et l'écoute.</p>  <p>L'adaptation au client et à ses attentes m'a permit de devenir un véritable caméléon.</p>
-                </section>
-                <section class="card">
-                    <h3>Gestionnaire </h3>
-                    <div class="img">
-                        <img src="img/cosMini.JPG"  alt="agent au travail">
+                <div class="row">
+                    <div class="col align-self-start div_icons">
+                        <!--######### Angular ######### -->
+                        <div class="container__comp">
+                            <div class="comp__img float-left">
+                                <p class="text-center"> Angular CLI</p>   
+                                <i class="fab fa-angular"></i>
+                            </div> 
+                        </div>
                     </div>
-                    <p> Salarié depuis septembre 2006 au sein du groupe SNCF, j'ai eu l'occassion de me former, de former et d'apprendre plusieur métiers.</p>
-                </section>
-                <section class="card">
-                    <h3>Développeur</h3>
-                    <div class="img">
-                        <img src="img/codeMini.jpg" alt="controleur au travail">
+                    <div class="col align-self-center div_icons">
+                        <!-- ######### Sass ######### -->
+                        <div class="container__comp">
+                            <div class="comp__img float-left">
+                                <p class="text-center"> Sass </p>   
+                                <i class="fab fa-sass"></i>
+                            </div> 
+                        </div>    
                     </div>
-                    <p> Salarié depuis septembre 2006 au sein du groupe SNCF, j'ai eu l'occassion de me former, de former et d'apprendre plusieur métiers.</p>
-                </section>
-        
+                    <div class="col align-self-end div_icons">
+                        <!--######### Bootstrap ######### -->
+                        <div class="container__comp">
+                            <div class="comp__img float-left">
+                                <p class="text-center"> Bootstrap</p>   
+                                <i class="fab fa-bootstrap"></i>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- ##########################  FIN FRONT CONTAINER ################################### -->
+                <h2 class="competence pt-1">#Compétences Back</h2>
+                <!-- ########################## BACK CONTAINER ################################### -->
+            <div class="container p-5 border-bottom border-top rounded">
+                <div class="container">
+                    <div class="row">
+                        <div class="col align-self-start div_icons">
+                            <!--######### SQL ######### --> 
+                            <div class="container__comp">
+                                <div class="comp__img float-left">
+                                    <p class="text-center"> SQL server</p>   
+                                    <i class="fas fa-server"></i>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="col align-self-center div_icons">
+                            <!--######### symfony ######### -->
+                            <div class="container__comp">
+                                <div class="comp__img float-left">
+                                    <p class="text-center"> Symfony</p>   
+                                    <i class="fab fa-symfony"></i>
+                                </div> 
+                            </div>    
+                        </div>
+                        <div class="col align-self-end div_icons">
+                            <!-- ######### php ######### -->
+                            <div class="container__comp">
+                                <div class="comp__img float-left">
+                                    <p class="text-center">PHP</p>   
+                                    <i class="fab fa-php"></i>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ##########################  FIN BACK CONTAINER ################################### -->
+                </div>
             </div>
         </div>
-        <div id="form" class="container__light">
-            <h2 class="formation">#Formation</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aliquid odit officia sed veritatis quasi velit vel iure, accusamus, sequi ea commodi! Animi, nemo consequatur perferendis, velit fugiat iure nihil facilis voluptate, dolorum odio officia impedit tempora sunt laborum optio maxime quibusdam veniam numquam itaque minus repellat architecto! Recusandae repudiandae hic incidunt dolore quidem animi inventore laborum id aliquam nisi voluptatibus, enim, et molestias? Dolore id porro aliquid dolorem eos officiis fuga aspernatur, est rerum et, facere ipsum debitis, perspiciatis libero. Blanditiis fugiat autem odio labore culpa harum at ullam, veritatis quia soluta debitis dolorum voluptates, totam veniam nemo ab sed alias, aspernatur eveniet earum ut! Laborum deserunt magnam sequi omnis nihil minus quo doloribus blanditiis obcaecati sit aliquam, perspiciatis iusto odio repudiandae eos pariatur commodi tempora ducimus possimus assumenda eum et provident amet. In nulla saepe, aut libero optio quibusdam molestiae ipsum voluptatum amet assumenda dolorum sint et alias cumque non, tempora earum consectetur rem deleniti! Eveniet quod est modi aperiam consectetur maxime non vel quis praesentium neque alias itaque tempore qui saepe ullam cumque, dicta sunt beatae asperiores. Officia, fuga dolorem facere molestiae sequi nobis, quasi quaerat distinctio est fugiat, esse possimus consequatur quae quisquam cupiditate autem rerum. Placeat harum numquam enim itaque odit, tenetur ab natus fugit excepturi, magnam ullam deleniti! Adipisci sint corporis ipsam, expedita quos quibusdam numquam voluptas animi, doloribus beatae nulla tenetur vitae. Dolores nulla quisquam facilis! Quos eum possimus ea ratione sit saepe nulla, odit eaque aperiam amet quam magni corporis cumque ipsum doloribus, culpa vero est ducimus provident et. Velit, voluptatum. Optio soluta temporibus fugiat beatae fuga. Accusamus illo, id nesciunt, impedit, iusto delectus sint dolor sapiente labore saepe magni reiciendis recusandae fuga deleniti asperiores corrupti modi voluptatem sequi minus. Aliquam consequatur velit cumque eum odit reprehenderit ratione non fugit enim at?</p>
-
-        </div>
-        <div class="container__dark">
-            <h2 class="competence">#Compétences</h2>
-
-        </div>
-
+        <!-- ###################################################################### -->
+        <!-- ########################### EXPERIENCE ############################### -->
+        <!-- ###################################################################### -->
+        <!-- ###################################################################### -->
+        <!-- ########################### FORMATION ############################### -->
+        <!-- ###################################################################### -->
     <footer>
+        <!-- ###################################################################### -->
+        <!-- ########################### ME CONTACTER ############################### -->
+        <!-- ###################################################################### -->
         <div class="container__dark">
-            <h2 class="contact">#Me contacter</h2>
+            <h2 id="contact"class="contact">#Me contacter</h2>
             <div id="social__media">
                 <ul>
                     <a href="#" class="gmail" >
@@ -91,7 +172,6 @@
                 </ul>
             </div>
         </div>
-
     </footer>
         <script src="js/app.js"></script>
     </body>
