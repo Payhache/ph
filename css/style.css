@@ -3,7 +3,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap");
 
 /* Général */
 * {
@@ -20,19 +20,21 @@ html {
   text-align: center;
   text-decoration: dashed;
   padding: 8rem 0rem 8rem 0rem;
-  font-size: 3rem;  
-}  @media screen and (max-width: 400px) {
+  font-size: 3rem;
+}
+@media screen and (max-width: 600px) {
   .titre {
     font-size: 1.5rem;
   }
 }
 h2.competence {
   font-size: 3rem;
-   padding: 1rem;
-   text-align: center;
-}    @media screen and (max-width: 400px) {
+  padding: 1rem;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
   h2.competence {
-   font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -44,20 +46,23 @@ h2.competence {
   opacity: 0.9;
 }
 .navigation a {
-  
   font-weight: bold;
   font-size: 1.2rem;
   color: #fffdfd;
-}   @media screen and (max-width: 400px) {
-      .navigation .hidden {
-        display : none;
-        font-size: 0.2rem;
-        }
-        .navigation .contact{
-          margin: auto;
-        }
-     }
-     
+}
+@media screen and (max-width: 600px) {
+  .navigation .hidden {
+    display: none;
+    font-size: 0.2rem;
+  }
+  .navigation .contact {
+    margin: auto;
+  }
+  .navigation .visible {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 .navigation a:hover {
   color: #fffdfd;
@@ -81,9 +86,10 @@ h2.competence {
   margin: auto;
   width: 60%;
   font-size: 2rem;
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   text-align: center;
-}   @media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 600px) {
   .citation p {
     width: 100%;
     font-size: 0.7rem;
@@ -95,7 +101,8 @@ h2.competence {
 
 span {
   font-size: 2.5rem;
-}  @media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 600px) {
   span {
     font-size: 1rem;
   }
@@ -103,14 +110,15 @@ span {
 p.author {
   font-size: 1rem;
   float: rigth;
-} @media screen and (max-width: 400px) {
-    p.author {
-      font-size: 0.5rem;
-      text-align: right;
-      margin-right: 3rem;
-      margin-top: 0.5rem;
-    }
+}
+@media screen and (max-width: 600px) {
+  p.author {
+    font-size: 0.5rem;
+    text-align: right;
+    margin-right: 3rem;
+    margin-top: 0.5rem;
   }
+}
 
 /* jumbomain  */
 h1 {
@@ -128,9 +136,11 @@ h1 {
   width: 900px;
   margin: auto;
   margin-top: 10%;
-}   @media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 600px) {
   .hero {
     width: 400px;
+    height: 500px;
   }
 }
 
@@ -143,7 +153,8 @@ picture {
   margin: 1rem;
   width: 240px;
   height: auto;
-} @media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 600px) {
   .hero__img {
     width: 100px;
     margin-top: 5rem;
@@ -156,13 +167,13 @@ picture {
   grid-row: 1;
   color: white;
   font-weight: 500;
-} @media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 600px) {
   .hero__title {
     font-size: 1rem;
     margin-top: 5rem;
     display: grid;
     place-items: center;
-  
   }
 }
 .hero__title::after {
@@ -184,7 +195,8 @@ picture {
   margin-top: 1rem;
   grid-column: 2/4;
   grid-row: 2;
-} @media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 600px) {
   .hero__paragraphe {
     grid-column: 1/4;
     font-size: 0.9rem;
@@ -209,7 +221,8 @@ h3 {
 /* FONT AWSOME */
 .comp__img {
   font-size: 5rem;
-}  @media screen and (max-width: 400px) {
+}
+@media screen and (max-width: 600px) {
   .comp__img {
     font-size: 3rem;
   }
@@ -231,22 +244,6 @@ h3 {
 #social__media li {
   display: none;
 }
-/* ######## Gmail btn ########
-################################*/
-a.gmail {
-  background-position: 100px 100px;
-}
-a.gmail:hover {
-  background-position: 100px 0px;
-}
-/* ######## twitter btn ########
-################################*/
-a.twitter {
-  background-position: -100px 100px;
-}
-a.twitter:hover {
-  background-position: -100px 200px;
-}
 /* ######## linkedin btn ########
 ################################*/
 a.linkedin {
@@ -262,25 +259,40 @@ a.linkedin:hover {
   padding: 7px, 7px;
 }
 
-.img__parcours {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding-top: 2rem;
-} @media screen and (max-width: 400px) {
+/* Parcours */
+
+.parcours {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.paragraphe {
+  margin-left: 2rem;
+}
+.logo {
+  border: solid black 1px;
+
+}
+@media screen and (max-width: 600px) {
   .img__parcours {
     margin: auto;
   }
+  .logo {
+    float: left;
+    margin: 1rem;
+  }
+  .parcours {
+    display: block;
+  }
 }
 .box {
-  text-align: center;
-  width: 50%;
+  width: 75%;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 600px) {
   .box {
     width: 100%;
   }
   .petitSpan {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    text-decoration: underline;
   }
 }
-
