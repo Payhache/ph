@@ -21,12 +21,21 @@ html {
   text-decoration: dashed;
   padding: 8rem 0rem 8rem 0rem;
   font-size: 3rem;  
+}  @media screen and (max-width: 400px) {
+  .titre {
+    font-size: 1.5rem;
+  }
 }
 h2.competence {
   font-size: 3rem;
    padding: 1rem;
    text-align: center;
+}    @media screen and (max-width: 400px) {
+  h2.competence {
+   font-size: 1.5rem;
+  }
 }
+
 /* navigation */
 .navigation {
   margin: auto;
@@ -35,11 +44,20 @@ h2.competence {
   opacity: 0.9;
 }
 .navigation a {
-
+  
   font-weight: bold;
   font-size: 1.2rem;
   color: #fffdfd;
-}
+}   @media screen and (max-width: 400px) {
+      .navigation .hidden {
+        display : none;
+        font-size: 0.2rem;
+        }
+        .navigation .contact{
+          margin: auto;
+        }
+     }
+     
 
 .navigation a:hover {
   color: #fffdfd;
@@ -65,14 +83,35 @@ h2.competence {
   font-size: 2rem;
   font-family: 'Roboto Slab', serif;
   text-align: center;
+}   @media screen and (max-width: 400px) {
+  .citation p {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  .citation {
+    margin-top: 2rem;
+  }
 }
+
 span {
   font-size: 2.5rem;
+}  @media screen and (max-width: 400px) {
+  span {
+    font-size: 1rem;
+  }
 }
 p.author {
   font-size: 1rem;
   float: rigth;
-}
+} @media screen and (max-width: 400px) {
+    p.author {
+      font-size: 0.5rem;
+      text-align: right;
+      margin-right: 3rem;
+      margin-top: 0.5rem;
+    }
+  }
+
 /* jumbomain  */
 h1 {
   font-family: "Fredoka One", cursive;
@@ -89,6 +128,10 @@ h1 {
   width: 900px;
   margin: auto;
   margin-top: 10%;
+}   @media screen and (max-width: 400px) {
+  .hero {
+    width: 400px;
+  }
 }
 
 picture {
@@ -100,6 +143,11 @@ picture {
   margin: 1rem;
   width: 240px;
   height: auto;
+} @media screen and (max-width: 400px) {
+  .hero__img {
+    width: 100px;
+    margin-top: 5rem;
+  }
 }
 .hero__title {
   margin-top: 2rem;
@@ -108,6 +156,14 @@ picture {
   grid-row: 1;
   color: white;
   font-weight: 500;
+} @media screen and (max-width: 400px) {
+  .hero__title {
+    font-size: 1rem;
+    margin-top: 5rem;
+    display: grid;
+    place-items: center;
+  
+  }
 }
 .hero__title::after {
   content: "";
@@ -128,6 +184,12 @@ picture {
   margin-top: 1rem;
   grid-column: 2/4;
   grid-row: 2;
+} @media screen and (max-width: 400px) {
+  .hero__paragraphe {
+    grid-column: 1/4;
+    font-size: 0.9rem;
+    margin: 1rem;
+  }
 }
 /* ##### Sections ######*/
 
@@ -147,6 +209,13 @@ h3 {
 /* FONT AWSOME */
 .comp__img {
   font-size: 5rem;
+}  @media screen and (max-width: 400px) {
+  .comp__img {
+    font-size: 3rem;
+  }
+  .text-center {
+    font-size: 0.7rem;
+  }
 }
 /* Footer */
 #social__media ul a {
@@ -197,5 +266,21 @@ a.linkedin:hover {
   margin-top: 2rem;
   margin-bottom: 2rem;
   padding-top: 2rem;
+} @media screen and (max-width: 400px) {
+  .img__parcours {
+    margin: auto;
+  }
+}
+.box {
+  text-align: center;
+  width: 50%;
+}
+@media screen and (max-width: 400px){
+  .box {
+    width: 100%;
+  }
+  .petitSpan {
+    font-size: 0.7rem;
+  }
 }
 
