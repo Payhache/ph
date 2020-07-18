@@ -122,7 +122,8 @@ h1 {
 }
 .jumbomain {
   height: 70vh;
-}
+  
+} 
 .hero {
   display: grid;
   position: relative;
@@ -303,4 +304,36 @@ a.linkedin:hover {
     font-size: 0.9rem;
     text-decoration: underline;
   }
+}
+
+/* ################## LANDSCAPE ############## */
+@media (orientation: landscape) {
+  .jumbomain {
+    height: 100vh;
+  }
+  .hero {
+    margin-top: 7rem;
+    width: 500px;
+    height: 100px;
+  }
+  .hero__img {
+    width: 100px;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+  }
+  .hero__title {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    display: grid;
+    place-items: center;
+  }
+  .hero__paragraphe {
+    grid-column: 1/4;
+    margin-top: 6rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 90%;
+  }
+
 }
