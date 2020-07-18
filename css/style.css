@@ -53,14 +53,9 @@ h2.competence {
 @media screen and (max-width: 600px) {
   .navigation .hidden {
     display: none;
-    font-size: 0.2rem;
   }
   .navigation .contact {
     margin: auto;
-  }
-  .navigation .visible {
-    display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -139,8 +134,12 @@ h1 {
 }
 @media screen and (max-width: 600px) {
   .hero {
+    margin-top: 7rem;
+    margin-left: auto;
     width: 400px;
-    height: 500px;
+    height: 400px;
+    /* test */
+    position: absolute;  
   }
 }
 
@@ -157,7 +156,8 @@ picture {
 @media screen and (max-width: 600px) {
   .hero__img {
     width: 100px;
-    margin-top: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
   }
 }
 .hero__title {
@@ -171,7 +171,7 @@ picture {
 @media screen and (max-width: 600px) {
   .hero__title {
     font-size: 1rem;
-    margin-top: 5rem;
+    margin-top: 1rem;
     display: grid;
     place-items: center;
   }
@@ -190,7 +190,15 @@ picture {
   z-index: -1;
   margin-bottom: 0.5em;
   border-radius: 28px;
+} @media screen and (max-width: 600px) {
+  .hero__title::after {
+    margin: 0.5rem;
+    left: 0rem;
+    right: -2em;
+    bottom: -2rem;
+  }
 }
+  
 .hero__paragraphe {
   margin-top: 1rem;
   grid-column: 2/4;
@@ -200,7 +208,9 @@ picture {
   .hero__paragraphe {
     grid-column: 1/4;
     font-size: 0.9rem;
-    margin: 1rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    text-align: left;
   }
 }
 /* ##### Sections ######*/
