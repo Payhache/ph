@@ -136,7 +136,7 @@ h1 {
   .hero {
     margin-top: 7rem;
     margin-left: auto;
-    width: 400px;
+    width: 380px;
     height: 400px;
   }
 }
@@ -206,10 +206,10 @@ picture {
 @media screen and (max-width: 600px) {
   .hero__paragraphe {
     grid-column: 1/4;
-    font-size: 0.8rem;
     margin-top: 7rem;
-    margin-left: 1rem;
-    width: 100%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 90%;
   }
 }
 /* ##### Sections ######*/
