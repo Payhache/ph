@@ -76,44 +76,6 @@ h2.competence {
   font-size: 1.2rem;
 }
 
-/*  Citation  */
-.citation p {
-  margin: auto;
-  width: 60%;
-  font-size: 2rem;
-  font-family: "Roboto Slab", serif;
-  text-align: center;
-}
-@media screen and (max-width: 600px) {
-  .citation p {
-    width: 100%;
-    font-size: 0.7rem;
-  }
-  .citation {
-    margin-top: 2rem;
-  }
-}
-
-span {
-  font-size: 2.5rem;
-}
-@media screen and (max-width: 600px) {
-  span {
-    font-size: 1rem;
-  }
-}
-p.author {
-  font-size: 1rem;
-  float: rigth;
-}
-@media screen and (max-width: 600px) {
-  p.author {
-    font-size: 0.5rem;
-    text-align: right;
-    margin-right: 3rem;
-    margin-top: 0.5rem;
-  }
-}
 
 /* jumbomain  */
 h1 {
@@ -213,6 +175,52 @@ picture {
     text-align: left;
   }
 }
+/*  Citation  */
+.citation {
+  width: 100%;
+  justify-content: stretch;
+  grid-column: 1/4;
+  grid-row: 3;
+
+}
+.citation p {
+  width: 100%;
+  width: 60%;
+  font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .citation p {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  .citation {
+    margin-top: 2rem;
+  }
+}
+
+span {
+  font-size: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  span {
+    font-size: 1rem;
+  }
+}
+p.author {
+  font-size: 1rem;
+  float: rigth;
+}
+@media screen and (max-width: 600px) {
+  p.author {
+    font-size: 0.5rem;
+    text-align: right;
+    margin-right: 3rem;
+    margin-top: 0.5rem;
+  }
+}
+
 /* ##### Sections ######*/
 
 /* Containers */
