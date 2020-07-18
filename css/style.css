@@ -121,7 +121,7 @@ h1 {
   font-weight: 500;
 }
 .jumbomain {
-  height: 60vh;
+  height: 70vh;
 }
 .hero {
   display: grid;
@@ -135,8 +135,7 @@ h1 {
 @media screen and (max-width: 600px) {
   .hero {
     margin-top: 7rem;
-    margin-left: auto;
-    width: 380px;
+    width: 340px;
     height: 400px;
   }
 }
@@ -153,7 +152,7 @@ picture {
 }
 @media screen and (max-width: 600px) {
   .hero__img {
-    width: 100px;
+    width: 90px;
     margin-top: 1rem;
     margin-bottom: 2rem;
     margin-right: 0rem;
