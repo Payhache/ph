@@ -138,8 +138,6 @@ h1 {
     margin-left: auto;
     width: 400px;
     height: 400px;
-    /* test */
-    position: absolute;  
   }
 }
 
@@ -158,6 +156,7 @@ picture {
     width: 100px;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    margin-right: 0rem;
   }
 }
 .hero__title {
@@ -170,7 +169,7 @@ picture {
 }
 @media screen and (max-width: 600px) {
   .hero__title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-top: 1rem;
     display: grid;
     place-items: center;
@@ -194,7 +193,7 @@ picture {
   .hero__title::after {
     margin: 0.5rem;
     left: 0rem;
-    right: -2em;
+    right: -0.2em; /* dépassement couleur du bord droite de la gride*/
     bottom: -2rem;
   }
 }
@@ -207,10 +206,10 @@ picture {
 @media screen and (max-width: 600px) {
   .hero__paragraphe {
     grid-column: 1/4;
-    font-size: 0.9rem;
-    margin-top: 5rem;
-    margin-left: 2rem;
-    text-align: left;
+    font-size: 0.8rem;
+    margin-top: 7rem;
+    margin-left: 1rem;
+    width: 100%;
   }
 }
 /* ##### Sections ######*/
