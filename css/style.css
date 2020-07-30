@@ -257,6 +257,8 @@ h3 {
 }
 .logo {
   border: solid black 1px;
+  box-shadow: darkgrey 0 0.5rem 0.5rem 0;
+
 }
 @media screen and (max-width: 600px) {
   .img__parcours {
