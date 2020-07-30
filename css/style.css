@@ -87,7 +87,7 @@ h2.competence {
 @media screen and (max-width: 600px) {
   .citation p {
     width: 100%;
-    font-size: 0.7rem;
+    font-size: 1rem;
   }
   .citation {
     margin-top: 2rem;
@@ -116,14 +116,13 @@ p.author {
 }
 
 /* jumbomain  */
-h1 {
+h1,h3 {
   font-family: "Fredoka One", cursive;
   font-weight: 500;
 }
 .jumbomain {
   height: 70vh;
-  
-} 
+}
 .hero {
   display: grid;
   position: relative;
@@ -189,7 +188,8 @@ picture {
   z-index: -1;
   margin-bottom: 0.5em;
   border-radius: 28px;
-} @media screen and (max-width: 600px) {
+}
+@media screen and (max-width: 600px) {
   .hero__title::after {
     margin: 0.5rem;
     left: 0rem;
@@ -197,7 +197,7 @@ picture {
     bottom: -2rem;
   }
 }
-  
+
 .hero__paragraphe {
   margin-top: 1rem;
   grid-column: 2/4;
@@ -239,29 +239,7 @@ h3 {
     font-size: 0.7rem;
   }
 }
-/* Footer */
-#social__media ul a {
-  display: inline-block;
-  background-image: url("../img/social-icons.png");
-  width: 95px;
-  height: 95px;
-  list-style-type: none;
-}
-#social__media ul {
-  text-align: center;
-}
-#social__media li {
-  display: none;
-}
-/* ######## linkedin btn ########
-################################*/
-a.linkedin {
-  background-position: -400px 100px;
-}
-a.linkedin:hover {
-  background-position: -400px 200px;
-}
-
+/* Icones comp */
 .div_icons {
   display: grid;
   place-items: center;
@@ -279,7 +257,6 @@ a.linkedin:hover {
 }
 .logo {
   border: solid black 1px;
-
 }
 @media screen and (max-width: 600px) {
   .img__parcours {
@@ -305,11 +282,46 @@ a.linkedin:hover {
     text-decoration: underline;
   }
 }
+/* Footer */
+#social__media ul a {
+  margin-top: 3rem;
+  display: inline-block;
+  background-image: url("../img/social-icons.png");
+  width: 95px;
+  height: 95px;
+  list-style-type: none;
+}
+#social__media ul {
+  text-align: center;
+}
+#social__media li {
+  display: none;
+}
+/* ######## linkedin btn ########
+################################*/
+a.linkedin {
+  background-position: -400px 100px;
+}
+a.linkedin:hover {
+  background-position: -400px 200px;
+}
+
+/* Mail  */
+.mail a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+}
+.mail a:hover {
+  color: black;
+  border-bottom: 3px solid #251f44;
+  text-decoration: none;
+}
 
 /* ################## LANDSCAPE ############## */
-@media (orientation: landscape) {
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
   .jumbomain {
-    height: 100vh;
+    height: 110vh;
   }
   .hero {
     margin-top: 7rem;
@@ -330,10 +342,47 @@ a.linkedin:hover {
   }
   .hero__paragraphe {
     grid-column: 1/4;
-    margin-top: 6rem;
+    margin-top: 5rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     width: 90%;
   }
+}
 
+/* PORTFOLIO */
+
+.portfolio p {
+  text-align: center;
+  font-style: italic;
+}
+.tutoprojects {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .tutoprojects {
+    display: block;
+  }
+  .work {
+    margin-top: 2rem;
+  }
+}
+.work h3 {
+  font-size: 1rem;
+}
+.work {
+  display: grid;
+  place-items: center;
+}
+.work a {
+  font-size: 2rem;
+  color: black;
+}
+
+.work img {
+  object-fit: contain;
+  box-shadow: darkgrey 0 0.5rem 0.5rem 0;
 }
