@@ -59,24 +59,24 @@ const launchGame = function () {
 
       displayTextResult(textTie);
       applyResultStyle(playerChoice, "tie");
-      setTimeout(function () {removeResultStyle(playerChoice, "tie");
+      setTimeout( () => {removeResultStyle(playerChoice, "tie");
       }, 1000);
 
     } else if (result === "win") {
 
-      displayScoreResult(playerScoreSPan, playerScore += 1 );
+      displayScore(playerScoreSPan, playerScore += 1 );
       displayTextResult(`${textWin} ${convertToWord(playerChoice)} bat ${convertToWord(computerChoice)}!`);
       applyResultStyle(playerChoice, "win");
-      setTimeout(function () {
+      setTimeout( () => {
         removeResultStyle(playerChoice, "win");
       }, 1000);
 
     } else if (result === "loose") {
 
-      displayScoreResult(computerScoreSpan, computerScore += 1);
+      displayScore(computerScoreSpan, computerScore += 1);
       displayTextResult(`${textLoose} ${convertToWord(computerChoice)} bat ${convertToWord(playerChoice)} !`);
       applyResultStyle(playerChoice, "loose");
-      setTimeout(function () {
+      setTimeout( () => {
         removeResultStyle(playerChoice, "loose");
       }, 1000);
     } 
@@ -85,9 +85,9 @@ const launchGame = function () {
   function checkIsgameOver(){
     if (computerScore == gameLimit || playerScore == gameLimit) {
       if (computerScore > playerScore) {
-        displayTextResult(textWonGame);
-      } else {
         displayTextResult(textLostGame);
+      } else {
+        displayTextResult(textWonGame);
       }
       setTimeout(resetGame, 2000);
     }    
@@ -96,13 +96,13 @@ const launchGame = function () {
 
   function displayImageComputerChoice(computerChoice) {
     if(computerChoice === "r"){
-      choiseImageTodisplay("pierre")
+      displayImage("pierre")
     }
     if(computerChoice === "p"){
-      choiseImageTodisplay("feuille")
+      displayImage("feuille")
     }
     if(computerChoice === "c"){
-      choiseImageTodisplay("ciseau")
+      displayImage("ciseau")
     }
   }
 
@@ -128,11 +128,11 @@ const launchGame = function () {
   function resetGame() {
     playerScore = 0;
     computerScore = 0;
-    computerScoreSpan.textContent = computerScore;
-    playerScoreSPan.textContent = playerScore;
+    displayScore(playerScoreSPan, playerScore);
+    displayScore(computerScoreSpan, computerScore)
   }
 
-  function choiseImageTodisplay(img) {
+  function displayImage(img) {
     computerChoiceImage.setAttribute("src", `img/${img}.png`);
   }
 
@@ -140,7 +140,7 @@ const launchGame = function () {
     resultSentence.textContent = textResult;
   }
 
-  function displayScoreResult(content, score) {
+  function displayScore(content, score) {
     content.textContent = score;
   }
 };
