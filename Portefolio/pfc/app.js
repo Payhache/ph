@@ -16,7 +16,7 @@ const launchGame = function () {
   btnReset.addEventListener("click", resetGame);
 
   for (let i = 0; i < choices.length; i++) {
-    
+
     choices[i].addEventListener("click", function () {
       playerChoice = choices[i].id;
       computerChoice = defineComputerChoice();
@@ -58,7 +58,7 @@ const launchGame = function () {
 
     } else if (result === "win") {
 
-      displayScoreResult(playerScoreSPan, playerScore++);
+      displayScoreResult(playerScoreSPan, playerScore += 1 );
       displayTextResult(`Tu marques un point !  ${convertToWord(playerChoice)} bat ${convertToWord(computerChoice)}!`);
       applyResultStyle(playerChoice, "win");
       setTimeout(function () {
@@ -67,7 +67,7 @@ const launchGame = function () {
 
     } else if (result === "loose") {
 
-      displayScoreResult(computerScoreSpan, computerScore++)
+      displayScoreResult(computerScoreSpan, computerScore += 1);
       displayTextResult(`Tu as perdu ! ${convertToWord(computerChoice)} bat ${convertToWord(playerChoice)} !`);
       applyResultStyle(playerChoice, "loose");
       setTimeout(function () {
@@ -138,6 +138,5 @@ const launchGame = function () {
     content.textContent = score;
   }
 };
-
 
 launchGame();
