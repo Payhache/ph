@@ -95,15 +95,9 @@ const launchGame = function () {
 
 
   function displayImageComputerChoice(computerChoice) {
-    if(computerChoice === "r"){
-      displayImage("pierre")
-    }
-    if(computerChoice === "p"){
-      displayImage("feuille")
-    }
-    if(computerChoice === "c"){
-      displayImage("ciseau")
-    }
+    if(computerChoice === "r") displayImage("pierre");
+    if(computerChoice === "p") displayImage("feuille");
+    if(computerChoice === "c") displayImage("ciseau");
   }
 
   function applyResultStyle(choice, cssClass) {
