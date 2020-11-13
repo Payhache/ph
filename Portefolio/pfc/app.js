@@ -13,6 +13,12 @@ const launchGame = function () {
   const computerScoreSpan = document.getElementById("computer-score");
   const computerChoiceImage = document.getElementById("imgComputerChoice");
 
+  const textWin = 'Tu marques un point ! '
+  const textLoose = 'Tu as perdu ! '
+  const textTie = 'égalité recommence ! '
+  const textWonGame = 'Tu as gagné la partie ! '
+  const textLostGame = 'Tu as perdu la partie !'
+
   btnReset.addEventListener("click", resetGame);
 
   for (let i = 0; i < choices.length; i++) {
@@ -51,7 +57,7 @@ const launchGame = function () {
   function displayResult(result) {
     if (result === "tie") {
 
-      displayTextResult("Egalité recommence !");
+      displayTextResult(textTie);
       applyResultStyle(playerChoice, "tie");
       setTimeout(function () {removeResultStyle(playerChoice, "tie");
       }, 1000);
@@ -59,7 +65,7 @@ const launchGame = function () {
     } else if (result === "win") {
 
       displayScoreResult(playerScoreSPan, playerScore += 1 );
-      displayTextResult(`Tu marques un point !  ${convertToWord(playerChoice)} bat ${convertToWord(computerChoice)}!`);
+      displayTextResult(`${textWin} ${convertToWord(playerChoice)} bat ${convertToWord(computerChoice)}!`);
       applyResultStyle(playerChoice, "win");
       setTimeout(function () {
         removeResultStyle(playerChoice, "win");
@@ -68,7 +74,7 @@ const launchGame = function () {
     } else if (result === "loose") {
 
       displayScoreResult(computerScoreSpan, computerScore += 1);
-      displayTextResult(`Tu as perdu ! ${convertToWord(computerChoice)} bat ${convertToWord(playerChoice)} !`);
+      displayTextResult(`${textLoose} ${convertToWord(computerChoice)} bat ${convertToWord(playerChoice)} !`);
       applyResultStyle(playerChoice, "loose");
       setTimeout(function () {
         removeResultStyle(playerChoice, "loose");
@@ -79,9 +85,9 @@ const launchGame = function () {
   function checkIsgameOver(){
     if (computerScore == gameLimit || playerScore == gameLimit) {
       if (computerScore > playerScore) {
-        displayTextResult("Tu as perdu  la partie");
+        displayTextResult(textWonGame);
       } else {
-        displayTextResult("Tu as gagné la partie");
+        displayTextResult(textLostGame);
       }
       setTimeout(resetGame, 2000);
     }    
