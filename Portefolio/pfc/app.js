@@ -13,30 +13,20 @@ const launchGame = function () {
   const computerScoreSpan = document.getElementById("computer-score");
   // Selection du texte pour annoncer le résultat :
   let resultSentence = document.querySelector(".result");
-  //Fonction lancée pour obtenir le choix de l'ordinateur
-  const randomComputerChoice = function (randomChoice) {
-    return choices[randomChoice].id;
-  };
+  // reset jeu avec le bouton
+  // selection du bouton reset :
+  const btnReset = document.querySelector(".btn-reset");
+  btnReset.addEventListener("click", resetGame);
   /*Choix effectué par le joueur, une boucle est faite sur le
 tableau afin de récuperer le click  sur chaque élément */
   for (let i = 0; i < choices.length; i++) {
     choices[i].addEventListener("click", function () {
       let playerChoice;
       let computerChoice;
-      /* Fais en sorte d'obtenir un chiffre entre 1 et 3 aléatoirement 
-    pour ensuite l'associer à l'index du tableau choices */
-      let randomChoice = Math.round(Math.random() * 2);
-      console.log(randomChoice);
-      
       // Affectation du choix du joueur
       playerChoice = choices[i].id;
       // Affectation du choix de l'ordinateur
-      computerChoice = randomComputerChoice(randomChoice);
-      // lancement du jeu
-      // reset jeu avec le bouton
-      // selection du bouton reset :
-      const btnReset = document.querySelector(".btn-reset");
-      btnReset.addEventListener("click", resetGame);
+      computerChoice = defineComputerChoice();
       // Gestion de l'affichage de l'image computer :
       // Choix computer = rock
       if(computerChoice === "r"){
@@ -58,10 +48,10 @@ tableau afin de récuperer le click  sur chaque élément */
       if (result === "tie") {
         resultSentence.textContent = "Egalité recommence !";
         // Ajoute couleur grise autour du choix en cas de bonne réponse
-        document.getElementById(playerChoice).classList.add("grey-glow");
+        applyResultStyle(playerChoice, "tie");
         // Efface la couleur grise aprés quelques secondes
         setTimeout(function () {
-          document.getElementById(playerChoice).classList.remove("grey-glow");
+          removeResultStyle(playerChoice, "tie");
         }, 1000);
         // Fin pas de vainqueur
         // Joueur Gagne
@@ -74,10 +64,10 @@ tableau afin de récuperer le click  sur chaque élément */
           playerChoice
         )} bat ${convertToWord(computerChoice)}! `;
         // Ajoute couleur verte autour du choix en cas de bonne réponse
-        document.getElementById(playerChoice).classList.add("green-glow");
+        applyResultStyle(playerChoice, "win");
         // Efface la couleur verte aprés quelques secondes
         setTimeout(function () {
-          document.getElementById(playerChoice).classList.remove("green-glow");
+          removeResultStyle(playerChoice, "win");
         }, 1000);
         // Fin joueur Gagne
         // Joueur perd
@@ -88,10 +78,10 @@ tableau afin de récuperer le click  sur chaque élément */
           computerChoice
         )} bat ${convertToWord(playerChoice)} !`;
         // Ajoute couleur rouge autour du choix en cas de bonne réponse
-        document.getElementById(playerChoice).classList.add("red-glow");
+        applyResultStyle(playerChoice, "loose");
         // Efface la couleur rouge aprés quelques secondes
         setTimeout(function () {
-          document.getElementById(playerChoice).classList.remove("red-glow");
+          removeResultStyle(playerChoice, "loose");
         }, 1000);
         // Fin joueur perd
       }
@@ -130,6 +120,19 @@ tableau afin de récuperer le click  sur chaque élément */
     }
   }
 
+  function applyResultStyle(choice, cssClass) {
+    document.getElementById(choice).classList.add(cssClass);
+  }
+
+  function removeResultStyle(choice, cssClass) {
+    document.getElementById(choice).classList.remove(cssClass);
+  }
+
+  function defineComputerChoice() {
+    randomNumber = Math.round(Math.random() * 2);
+    return  choices[randomNumber].id
+  }
+
   // Fonction pour afficher le resultat en toute lettre
   function convertToWord(letter) {
     if (letter === "r") return " la Pierre";
@@ -144,5 +147,6 @@ tableau afin de récuperer le click  sur chaque élément */
     playerScoreSPan.textContent = playerScore;
   }
 };
+
 
 launchGame();

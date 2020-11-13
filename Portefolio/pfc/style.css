@@ -75,18 +75,18 @@ header > h1 {
 }
 
 /* Good Answer*/
-.green-glow {
+.win {
   border: 4px solid #4dcc7d;
   box-shadow: 0 0 10px #31b43a;
 }
 
 /* Bad Answer*/
-.red-glow {
+.loose {
   border: 4px solid #fc121b;
   box-shadow: 0 0 10px #d01115;
 }
 /*Tie Answer*/
-.grey-glow {
+.tie {
   border: 4px solid #464647;
   box-shadow: 0 0 10px #25292b;
 }
