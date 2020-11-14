@@ -59,26 +59,18 @@ const launchGame = function () {
 
       displayTextResult(textTie);
       applyResultStyle(playerChoice, "tie");
-      setTimeout( () => {removeResultStyle(playerChoice, "tie");
-      }, 1000);
 
     } else if (result === "win") {
 
       displayScore(playerScoreSPan, ++playerScore);
       displayTextResult(`${textWin} ${convertToWord(playerChoice)} bat ${convertToWord(computerChoice)}!`);
       applyResultStyle(playerChoice, "win");
-      setTimeout( () => {
-        removeResultStyle(playerChoice, "win");
-      }, 1000);
 
     } else if (result === "loose") {
 
       displayScore(computerScoreSpan, ++computerScore);
       displayTextResult(`${textLoose} ${convertToWord(computerChoice)} bat ${convertToWord(playerChoice)} !`);
       applyResultStyle(playerChoice, "loose");
-      setTimeout( () => {
-        removeResultStyle(playerChoice, "loose");
-      }, 1000);
     } 
   }
 
@@ -93,7 +85,6 @@ const launchGame = function () {
     }    
   }
 
-
   function displayImageComputerChoice(computerChoice) {
     if(computerChoice === "r") displayImage("pierre");
     if(computerChoice === "p") displayImage("feuille");
@@ -101,11 +92,20 @@ const launchGame = function () {
   }
 
   function applyResultStyle(choice, cssClass) {
-    document.getElementById(choice).classList.add(cssClass);
+    removeStyleResult(choice)
+    document.getElementById(choice).dataset.result = cssClass;
   }
 
-  function removeResultStyle(choice, cssClass) {
-    document.getElementById(choice).classList.remove(cssClass);
+  function removeStyleResult(element) {
+    choices.forEach( choice => {
+      if(choice.id !== element) {
+        document.getElementById(choice.id).dataset.result = "";
+      } else {
+        setTimeout(() => {
+          document.getElementById(element).dataset.result = "";
+        },2000);
+      }
+    });
   }
 
   function defineComputerChoice() {
