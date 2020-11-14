@@ -2,10 +2,10 @@ const launchGame = function () {
   let result;
   let playerChoice;
   let computerChoice;
-  let gameLimit = 10;
   let playerScore = 0;
   let computerScore = 0;
 
+  const gameLimit = 10;
   const choices = document.querySelectorAll(".choice");
   const btnReset = document.querySelector(".btn-reset");
   const resultSentence = document.querySelector(".result");
@@ -23,12 +23,12 @@ const launchGame = function () {
 
   for (let i = 0; i < choices.length; i++) {
 
-    choices[i].addEventListener("click", function () {
+    choices[i].addEventListener("click", () => {
       playerChoice = choices[i].id;
       computerChoice = defineComputerChoice();
 
-      displayImageComputerChoice(computerChoice);
       gameStart(playerChoice, computerChoice);
+      displayImageComputerChoice(computerChoice);
       displayResult(result);
       checkIsgameOver();
     });
@@ -64,7 +64,7 @@ const launchGame = function () {
 
     } else if (result === "win") {
 
-      displayScore(playerScoreSPan, playerScore += 1 );
+      displayScore(playerScoreSPan, ++playerScore);
       displayTextResult(`${textWin} ${convertToWord(playerChoice)} bat ${convertToWord(computerChoice)}!`);
       applyResultStyle(playerChoice, "win");
       setTimeout( () => {
@@ -73,7 +73,7 @@ const launchGame = function () {
 
     } else if (result === "loose") {
 
-      displayScore(computerScoreSpan, computerScore += 1);
+      displayScore(computerScoreSpan, ++computerScore);
       displayTextResult(`${textLoose} ${convertToWord(computerChoice)} bat ${convertToWord(playerChoice)} !`);
       applyResultStyle(playerChoice, "loose");
       setTimeout( () => {
