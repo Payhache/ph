@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c0e8719-5909-4513-b293-2bc6f16bc789" name="Default Changelist" comment="" />
+    <list default="true" id="5c0e8719-5909-4513-b293-2bc6f16bc789" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pfc/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pfc/app.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605253528572</updated>
       <workItem from="1605253529704" duration="1214000" />
+      <workItem from="1605357644925" duration="121000" />
     </task>
     <servers />
   </component>
@@ -67,5 +70,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

@@ -26,7 +26,7 @@ const days = [
 const giveaway = document.querySelector('.giveaway');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
-let futureDate = new Date(2020,9,13,15,33,0);
+let futureDate = new Date(2020,11,09,11,15,0);
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
 const minutes = futureDate.getMinutes();
@@ -38,12 +38,12 @@ let day = futureDate.getDay();
 
 
 
-giveaway.textContent = `La promotion se termine le ${days[day]} ${date} ${months[month]} ${year} à  ${hours}:${minutes}`;
+giveaway.textContent = `Le cursus se termine ${days[day]} ${date} ${months[month]} ${year} à  ${hours}:${minutes}`;
 
 // Future time in ms
 const futurTime = futureDate.getTime();
 
-// Création de la fonction pour le décompte
+
 function getRemainingTime(){
 const today = new Date().getTime();
 const timeRemaining = futurTime - today;
@@ -65,14 +65,14 @@ function format(item){
     }
     return item;
 }
-// Set values Array
+
 const values = [days, hours, minutes, secs];
 
 items.forEach(function(item,index) {
     item.textContent = format(values[index]);
 });
 };
-// countdown
+
 let countdown = setInterval(getRemainingTime, 1000);
 getRemainingTime();
 

@@ -75,7 +75,7 @@ const launchGame = function () {
   }
 
   function checkIsgameOver(){
-    if (computerScore == gameLimit || playerScore == gameLimit) {
+    if (computerScore === gameLimit || playerScore === gameLimit) {
       if (computerScore > playerScore) {
         displayTextResult(textLostGame);
       } else {
@@ -109,7 +109,7 @@ const launchGame = function () {
   }
 
   function defineComputerChoice() {
-    randomNumber = Math.round(Math.random() * 2);
+    let randomNumber = Math.round(Math.random() * 2);
     return  choices[randomNumber].id
   }
 
@@ -138,5 +138,4 @@ const launchGame = function () {
     content.textContent = score;
   }
 };
-
 launchGame();
